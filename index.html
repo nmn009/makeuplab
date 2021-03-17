@@ -3,22 +3,53 @@
 
 <head>
     <style>
+        * {
+            background-color: lemonchiffon;
+        }
+
+        button {
+            border-radius: 50rem;
+        }
+
         #box {
+            position: absolute;
             text-align: center;
             background-color: hotpink;
-            scroll-padding-left:inherit;
-            margin-top: 40%;
+            scroll-padding-left: inherit;
+            margin: 50%;
+        }
+
+        button:hover {
+            cursor: pointer;
+            color: blueviolet;
+            text-shadow: cyan;
+            font-size: 1rem;
+        }
+
+        #Console {
+            position: relative;
+            grid: 10%;
         }
     </style>
 </head>
 
 <body>
+    <div id="display">
+
+        <p>I</p>
+        <p>Love</p>
+        <p>You</p>
+        <p>Happy</p>
+        <p>Birthday</p>
+
+
+    </div>
     <div id="box">
         <h1>Simple calculation</h1>
-        <input type="radio" name="calculation" id="addition">Addition</input>
-        <input type="radio" name="calculation" id="multiplication">Multiplication</input>
-        <input type="radio" name="calculation" id="subtraction">Subtraction</input>
-        <input type="radio" name="calculation" id="division">Division</intput>
+        <input type="radio" name="calculation" id="addition">Addition</input><br>
+        <input type="radio" name="calculation" id="multiplication">Multiplication</input><br>
+        <input type="radio" name="calculation" id="subtraction">Subtraction</input><br>
+        <input type="radio" name="calculation" id="division">Division</intput><br>
         <br>
         <input type="text" id="first value">First value</input>
         <br>
@@ -27,8 +58,40 @@
         <button id="btn">Click here</button>
         <h1 id="result"></h1>
     </div>
+    <div id="Console">
+        <button id="LogDemo">Console Log Demo </button>
+        <button id="ErrorDemo">Console Error Demo </button>
+        <button id="Dir">Console Dir </button>
+        <button id="dirxml">Console dirxml </button>
+        <button id="error">Console error </button>
+        <button id="GroupStart">Console Group Start </button>
+        <button id="GroupEnd">Console Group End </button>
+        <button id="Table">Console Table </button>
+        <button id="StartTimer">Start Timer </button>
+        <button id="EndTimer">End Timer </button>
+        <button id="Trace">Console Trace </button>
+        <button id="Trigger">Trigger a Global Error </button>
+    </div>
     <script>
         document.getElementById("btn").addEventListener("click", calculation);
+        document.getElementById("LogDemo").addEventListener("click", LogDemo);
+        document.getElementById("ErrorDemo").addEventListener("click", ErrorDemo);
+        document.getElementById("Dir").addEventListener("click", Dir);
+        document.getElementById("dirxml").addEventListener("click", dirxml);
+        document.getElementById("error").addEventListener("click", Error);
+        document.getElementById("GroupStart").addEventListener("click", GroupStart);
+        document.getElementById("GroupEnd").addEventListener("click", GroupEnd);
+        document.getElementById("Table").addEventListener("click", Table);
+        document.getElementById("StartTimer").addEventListener("click", StartTimer);
+        document.getElementById("EndTimer").addEventListener("click", EndTimer);
+        document.getElementById("Trace").addEventListener("click", Trace);
+        document.getElementById("Trigger").addEventListener("click", Trigger);
+
+        function LogDemo(){
+            
+        }
+
+
         function calculation() {
             let x = document.getElementById("first value").value;
             x = parseInt(x);
